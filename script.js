@@ -85,3 +85,20 @@ function handleDonation() {
     });
   }
   
+
+  document.getElementById('navbar-toggler').addEventListener('click', function() {
+    var navbarMenu = document.getElementById('navbar-menu');
+    var navbarToggler = document.getElementById('navbar-toggler');
+    navbarMenu.classList.toggle('active');
+    navbarToggler.classList.toggle('active');
+  
+    if (navbarToggler.classList.contains('active')) {
+      navbarToggler.setAttribute('aria-label', 'Close Menu');
+      navbarToggler.innerHTML = '<img src="cross.png" width="35px" alt="Close Icon">';
+    } else {
+      navbarToggler.setAttribute('aria-label', 'Open Menu');
+      navbarToggler.innerHTML = '<span class="navbar-toggler-icon"><img src="ham.png" width="35px" alt=""></span>';
+    }
+  });
+  
+  
